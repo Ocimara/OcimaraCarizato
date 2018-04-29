@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF0BBF2D208D19E4001E13FA /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BBF2C208D19E3001E13FA /* Calculator.swift */; };
+		DF0BBF2F208D1FF6001E13FA /* CalculatorValuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BBF2E208D1FF6001E13FA /* CalculatorValuesViewController.swift */; };
+		DF0BBF3F209580B2001E13FA /* StatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BBF3E209580B2001E13FA /* StatesManager.swift */; };
+		DF0BBF4120958A6C001E13FA /* StateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BBF4020958A6C001E13FA /* StateTableViewCell.swift */; };
+		DFE94F94208800CC005BC2B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE94F93208800CC005BC2B9 /* AppDelegate.swift */; };
+		DFE94F99208800CC005BC2B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE94F97208800CC005BC2B9 /* Main.storyboard */; };
+		DFE94F9C208800CC005BC2B9 /* OcimaraCarizato.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFE94F9A208800CC005BC2B9 /* OcimaraCarizato.xcdatamodeld */; };
+		DFE94F9E208800CD005BC2B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE94F9D208800CD005BC2B9 /* Assets.xcassets */; };
+		DFE94FA1208800CD005BC2B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE94F9F208800CD005BC2B9 /* LaunchScreen.storyboard */; };
+		DFE94FA92088015B005BC2B9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DFE94FA82088015B005BC2B9 /* Settings.bundle */; };
+		DFE94FAB20897416005BC2B9 /* AddEditProdutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE94FAA20897416005BC2B9 /* AddEditProdutoViewController.swift */; };
+		DFE94FAD20897439005BC2B9 /* LstProdutoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE94FAC20897439005BC2B9 /* LstProdutoTableViewController.swift */; };
+		DFE94FB120897810005BC2B9 /* ProdutoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE94FB020897810005BC2B9 /* ProdutoTableViewCell.swift */; };
+		DFE94FB3208AB08F005BC2B9 /* ViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE94FB2208AB08F005BC2B9 /* ViewController+CoreData.swift */; };
+		DFE94FBA208B9111005BC2B9 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE94FB9208B9111005BC2B9 /* AjustesViewController.swift */; };
+		DFE94FBE208C0EE6005BC2B9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE94FBD208C0EE6005BC2B9 /* Configuration.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF0BBF2C208D19E3001E13FA /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		DF0BBF2E208D1FF6001E13FA /* CalculatorValuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorValuesViewController.swift; sourceTree = "<group>"; };
+		DF0BBF3E209580B2001E13FA /* StatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesManager.swift; sourceTree = "<group>"; };
+		DF0BBF4020958A6C001E13FA /* StateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewCell.swift; sourceTree = "<group>"; };
+		DFE94F90208800CC005BC2B9 /* OcimaraCarizato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OcimaraCarizato.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE94F93208800CC005BC2B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DFE94F98208800CC005BC2B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFE94F9B208800CC005BC2B9 /* OcimaraCarizato.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OcimaraCarizato.xcdatamodel; sourceTree = "<group>"; };
+		DFE94F9D208800CD005BC2B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFE94FA0208800CD005BC2B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DFE94FA2208800CD005BC2B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE94FA82088015B005BC2B9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		DFE94FAA20897416005BC2B9 /* AddEditProdutoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProdutoViewController.swift; sourceTree = "<group>"; };
+		DFE94FAC20897439005BC2B9 /* LstProdutoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LstProdutoTableViewController.swift; sourceTree = "<group>"; };
+		DFE94FB020897810005BC2B9 /* ProdutoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoTableViewCell.swift; sourceTree = "<group>"; };
+		DFE94FB2208AB08F005BC2B9 /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
+		DFE94FB9208B9111005BC2B9 /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
+		DFE94FBD208C0EE6005BC2B9 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFE94F8D208800CC005BC2B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DFE94F87208800CC005BC2B9 = {
+			isa = PBXGroup;
+			children = (
+				DFE94F92208800CC005BC2B9 /* OcimaraCarizato */,
+				DFE94F91208800CC005BC2B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DFE94F91208800CC005BC2B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFE94F90208800CC005BC2B9 /* OcimaraCarizato.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFE94F92208800CC005BC2B9 /* OcimaraCarizato */ = {
+			isa = PBXGroup;
+			children = (
+				DFE94FB4208ACE01005BC2B9 /* Model */,
+				DFE94FAE2089744B005BC2B9 /* View */,
+				DFE94FAF20897472005BC2B9 /* Controller */,
+				DFE94FA82088015B005BC2B9 /* Settings.bundle */,
+				DFE94F93208800CC005BC2B9 /* AppDelegate.swift */,
+				DFE94F9D208800CD005BC2B9 /* Assets.xcassets */,
+				DFE94FA2208800CD005BC2B9 /* Info.plist */,
+				DFE94F9A208800CC005BC2B9 /* OcimaraCarizato.xcdatamodeld */,
+			);
+			path = OcimaraCarizato;
+			sourceTree = "<group>";
+		};
+		DFE94FAE2089744B005BC2B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DFE94F9F208800CD005BC2B9 /* LaunchScreen.storyboard */,
+				DFE94F97208800CC005BC2B9 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DFE94FAF20897472005BC2B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF0BBF2E208D1FF6001E13FA /* CalculatorValuesViewController.swift */,
+				DFE94FB9208B9111005BC2B9 /* AjustesViewController.swift */,
+				DFE94FB020897810005BC2B9 /* ProdutoTableViewCell.swift */,
+				DF0BBF4020958A6C001E13FA /* StateTableViewCell.swift */,
+				DFE94FAC20897439005BC2B9 /* LstProdutoTableViewController.swift */,
+				DFE94FAA20897416005BC2B9 /* AddEditProdutoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DFE94FB4208ACE01005BC2B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF0BBF3E209580B2001E13FA /* StatesManager.swift */,
+				DFE94FBD208C0EE6005BC2B9 /* Configuration.swift */,
+				DFE94FB2208AB08F005BC2B9 /* ViewController+CoreData.swift */,
+				DF0BBF2C208D19E3001E13FA /* Calculator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFE94F8F208800CC005BC2B9 /* OcimaraCarizato */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFE94FA5208800CD005BC2B9 /* Build configuration list for PBXNativeTarget "OcimaraCarizato" */;
+			buildPhases = (
+				DFE94F8C208800CC005BC2B9 /* Sources */,
+				DFE94F8D208800CC005BC2B9 /* Frameworks */,
+				DFE94F8E208800CC005BC2B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OcimaraCarizato;
+			productName = OcimaraCarizato;
+			productReference = DFE94F90208800CC005BC2B9 /* OcimaraCarizato.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFE94F88208800CC005BC2B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Ocimara Barcellos";
+				TargetAttributes = {
+					DFE94F8F208800CC005BC2B9 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = DFE94F8B208800CC005BC2B9 /* Build configuration list for PBXProject "OcimaraCarizato" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFE94F87208800CC005BC2B9;
+			productRefGroup = DFE94F91208800CC005BC2B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFE94F8F208800CC005BC2B9 /* OcimaraCarizato */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFE94F8E208800CC005BC2B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE94FA92088015B005BC2B9 /* Settings.bundle in Resources */,
+				DFE94FA1208800CD005BC2B9 /* LaunchScreen.storyboard in Resources */,
+				DFE94F9E208800CD005BC2B9 /* Assets.xcassets in Resources */,
+				DFE94F99208800CC005BC2B9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFE94F8C208800CC005BC2B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF0BBF2F208D1FF6001E13FA /* CalculatorValuesViewController.swift in Sources */,
+				DF0BBF3F209580B2001E13FA /* StatesManager.swift in Sources */,
+				DFE94FAB20897416005BC2B9 /* AddEditProdutoViewController.swift in Sources */,
+				DFE94F94208800CC005BC2B9 /* AppDelegate.swift in Sources */,
+				DFE94F9C208800CC005BC2B9 /* OcimaraCarizato.xcdatamodeld in Sources */,
+				DF0BBF2D208D19E4001E13FA /* Calculator.swift in Sources */,
+				DFE94FAD20897439005BC2B9 /* LstProdutoTableViewController.swift in Sources */,
+				DF0BBF4120958A6C001E13FA /* StateTableViewCell.swift in Sources */,
+				DFE94FBA208B9111005BC2B9 /* AjustesViewController.swift in Sources */,
+				DFE94FBE208C0EE6005BC2B9 /* Configuration.swift in Sources */,
+				DFE94FB120897810005BC2B9 /* ProdutoTableViewCell.swift in Sources */,
+				DFE94FB3208AB08F005BC2B9 /* ViewController+CoreData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DFE94F97208800CC005BC2B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFE94F98208800CC005BC2B9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DFE94F9F208800CD005BC2B9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFE94FA0208800CD005BC2B9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DFE94FA3208800CD005BC2B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DFE94FA4208800CD005BC2B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFE94FA6208800CD005BC2B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEV7W2TPMA;
+				INFOPLIST_FILE = OcimaraCarizato/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ocimara.OcimaraCarizato;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DFE94FA7208800CD005BC2B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEV7W2TPMA;
+				INFOPLIST_FILE = OcimaraCarizato/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ocimara.OcimaraCarizato;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFE94F8B208800CC005BC2B9 /* Build configuration list for PBXProject "OcimaraCarizato" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE94FA3208800CD005BC2B9 /* Debug */,
+				DFE94FA4208800CD005BC2B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFE94FA5208800CD005BC2B9 /* Build configuration list for PBXNativeTarget "OcimaraCarizato" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE94FA6208800CD005BC2B9 /* Debug */,
+				DFE94FA7208800CD005BC2B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DFE94F9A208800CC005BC2B9 /* OcimaraCarizato.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DFE94F9B208800CC005BC2B9 /* OcimaraCarizato.xcdatamodel */,
+			);
+			currentVersion = DFE94F9B208800CC005BC2B9 /* OcimaraCarizato.xcdatamodel */;
+			path = OcimaraCarizato.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DFE94F88208800CC005BC2B9 /* Project object */;
+}
