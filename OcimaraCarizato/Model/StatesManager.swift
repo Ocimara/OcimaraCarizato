@@ -55,7 +55,7 @@ class StatesManager {
             
            do {
                 try context.execute(deleteRequest)
-                try context.save()
+               // try context.save()
                 context.delete(state)
                 try context.save()
                 //context.reset()
