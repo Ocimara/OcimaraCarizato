@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import CoreData
 
 class AjustesViewController: UIViewController {
@@ -60,6 +61,7 @@ class AjustesViewController: UIViewController {
     }
     func loadEstados() {
         stateManager.loadStates(with: context)
+        stateManager.fetchedResultsControllerState.delegate = self
         tvEstados.reloadData()
     }
     
@@ -160,54 +162,93 @@ class AjustesViewController: UIViewController {
     }
 }
 
-extension AjustesViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+// #MARK EXTENSION
+extension AjustesViewController: UIScrollViewDelegate
+{
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        tfIof.resignFirstResponder()
+        tfDolar.resignFirstResponder()
+    }
+}
+
+extension AjustesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        let count = stateManager.fetchedResultsControllerState.fetchedObjects?.count ?? 0
         
-        let count = stateManager.states.count
+        tableView.backgroundView = count == 0 ? label : nil
         
-        tvEstados.backgroundView = count == 0 ? label : nil
         return count
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tfIof.resignFirstResponder()
+        tfDolar.resignFirstResponder()
+        tvEstados.deselectRow(at: indexPath, animated: false)
+        
+        let state = stateManager.fetchedResultsControllerState.fetchedObjects![indexPath.row]
+        showAlert(with: state)
+        
+    }
     
+}
+
+
+extension AjustesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tvEstados.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! StateTableViewCell
-        let state = stateManager.states[indexPath.row]
+        let state = stateManager.fetchedResultsControllerState.fetchedObjects![indexPath.row]
         cell.prepare(witch: state)
         return cell
         
     }
     
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tfIof.resignFirstResponder()
-        tfDolar.resignFirstResponder()
-         tvEstados.deselectRow(at: indexPath, animated: false)
-        
-        let state = stateManager.states[indexPath.row]
-        showAlert(with: state)
-       
-    }
-    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             stateManager.deleteState(index: indexPath.row, with: context)
-            stateManager.states.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            //tableView.reloadData()
+            //tableView.deleteRows(at: [indexPath], with: .fade)
+             //guard let state = stateManager.fetchedResultsControllerState.fetchedObjects?[index] else {return}
+            
         }
      }
+    
 }
 
-extension AjustesViewController: UITableViewDelegate, UIScrollViewDelegate {
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        tfIof.resignFirstResponder()
-        tfDolar.resignFirstResponder()
+extension AjustesViewController: NSFetchedResultsControllerDelegate{
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tvEstados.beginUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        switch type {
+        case .insert:
+            tvEstados.insertSections(IndexSet(integer: sectionIndex), with: .fade)
+        case .delete:
+            tvEstados.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
+        case .move:
+            break
+        case .update:
+            break
         }
+    }
     
-  
-
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            tvEstados.insertRows(at: [newIndexPath!], with: .fade)
+        case .delete:
+            tvEstados.deleteRows(at: [indexPath!], with: .fade)
+        case .update:
+            tvEstados.reloadRows(at: [indexPath!], with: .fade)
+        case .move:
+            tvEstados.moveRow(at: indexPath!, to: newIndexPath!)
+        }
+    }
     
-    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tvEstados.endUpdates()
+    }
     
 }
 

@@ -17,12 +17,16 @@ class LstProdutoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lbValida.text = "Sua lista está vazia!"
-        lbValida.textAlignment = .center
-        loadProdutos()
+     
         
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        lbValida.text = "Sua lista está vazia!"
+        lbValida.textAlignment = .center
+        loadProdutos()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier! == "sgEditProduto" {
             let vc = segue.destination as! AddEditProdutoViewController

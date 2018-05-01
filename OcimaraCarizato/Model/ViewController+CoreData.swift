@@ -10,12 +10,11 @@ import CoreData
 
 extension UIViewController {
     
+    var appDelegate: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
     var context: NSManagedObjectContext {
-    
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
         return appDelegate.persistentContainer.viewContext
-        
     }
 
 }
