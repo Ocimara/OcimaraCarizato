@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 
 class StatesManager {
@@ -53,12 +54,16 @@ class StatesManager {
             deleteRequest.resultType = .resultTypeObjectIDs
             
             
+            
            do {
                 try context.execute(deleteRequest)
-               // try context.save()
+        
+            
+               try context.save()
+                context.reset()
                 context.delete(state)
                 try context.save()
-                //context.reset()
+            
             } catch{
                 print(error.localizedDescription)
             }

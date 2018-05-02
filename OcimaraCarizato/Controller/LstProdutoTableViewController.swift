@@ -48,6 +48,7 @@ class LstProdutoTableViewController: UITableViewController {
         
         do {
             try    fetchedResultsController.performFetch()
+            tableView.reloadData()
         } catch  {
             print(error.localizedDescription)
         }

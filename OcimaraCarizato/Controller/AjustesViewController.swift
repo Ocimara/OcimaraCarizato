@@ -110,23 +110,12 @@ class AjustesViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: btTitle, style: .default, handler: {(action) in
             var errors: String = ""
-            let estado = estado ?? State(context: self.context)
             
-            if alert.textFields?[0].text != nil && alert.textFields?[0].text?.isEmpty == false {
-                estado.title = alert.textFields?[0].text
-            }
-            else
-            {
+            if alert.textFields?[0].text == nil || alert.textFields?[0].text?.isEmpty == true {
                 errors.append("Preencha o Estado.")
             }
            
-            if alert.textFields?[1].text != nil && alert.textFields?[1].text?.isEmpty == false {
-                 let vlTax: String = self.calc.verificaSinal((alert.textFields?[1].text)!)
-                //conforme consulta google existem estados com taxa 0
-                    estado.tax = self.calc.convertDouble(vlTax)
-            }
-            else
-            {
+            if alert.textFields?[1].text == nil || alert.textFields?[1].text?.isEmpty == true {
                 errors.append("\n Preencher Taxa.")
             }
             
@@ -137,6 +126,12 @@ class AjustesViewController: UIViewController {
             {
                 do
                 {
+                    let estado = estado ?? State(context: self.context)
+                    let vlTax: String = self.calc.verificaSinal((alert.textFields?[1].text)!)
+                    
+                    estado.tax = self.calc.convertDouble(vlTax)
+                    estado.title = alert.textFields?[0].text
+                    
                     try self.context.save()
                     self.loadEstados()
                 }
@@ -205,9 +200,7 @@ extension AjustesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             stateManager.deleteState(index: indexPath.row, with: context)
-            //tableView.reloadData()
-            //tableView.deleteRows(at: [indexPath], with: .fade)
-             //guard let state = stateManager.fetchedResultsControllerState.fetchedObjects?[index] else {return}
+
             
         }
      }
