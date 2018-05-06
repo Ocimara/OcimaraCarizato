@@ -154,58 +154,45 @@ class AddEditProdutoViewController: UIViewController {
     }
     
     @IBAction func AddEdit(_ sender: Any) {
-        if produto == nil {
-            produto = Product(context: context)
-        }
-        
+        let vlValor = calc.verificaSinal(tfValorDolar.text!)
         var errors: String = ""
         
-        if tfProduto.text != nil && tfProduto.text?.isEmpty == false {
-            produto.title = tfProduto.text
-        }
-        else {
+        if tfProduto.text?.isEmpty == true {
             errors.append("Preencher Produto.")
         }
         
-        if ivProduto.image != nil && ivProduto.image != UIImage(named: "imgProduto") {
-            produto.imgProduct = image
-        }
-        else
-        {
+        if ivProduto.image == nil || ivProduto.image == UIImage(named: "imgProduto") {
             errors.append("\n Selecionar Imagem.")
         }
         
-        
-        if tfEstado.text != nil && tfEstado.text?.isEmpty == false {
-            
-            let estado = fetchedResultsController.fetchedObjects?.filter({$0.title == tfEstado.text}).first
-           produto.relationState = estado
-        }
-        else
-        {
+        if tfEstado.text?.isEmpty == true {
             errors.append("\n Selecionar Estado.")
         }
-        if tfValorDolar.text != nil && tfValorDolar.text?.isEmpty == false {
-            let vlValor = calc.verificaSinal(tfValorDolar.text!)
-            if calc.convertDouble(vlValor) != 0 {
-                produto.vlProduct = calc.convertDouble(vlValor)
-            }
-            else
-            {
+        
+        if tfValorDolar.text?.isEmpty == true {
+            errors.append("\n Preencher Valor.")
+        }
+        else {
+            if calc.convertDouble(vlValor) == 0 {
                 errors.append("\n Valor Inválido.")
             }
         }
-        else {
-            errors.append("\n Preencher Valor.")
-        }
         
-        produto.flCard = stCartao.isOn
-      
         if errors.description != "" && errors.description.isEmpty == false {
             showAlert(ptitle: "Alerta!",pMsg: errors.description)
         }
         else
         {
+            if produto == nil {
+                produto = Product(context: context)
+            }
+            produto.vlProduct = calc.convertDouble(vlValor)
+            produto.title = tfProduto.text
+            produto.imgProduct = image
+            let estado = fetchedResultsController.fetchedObjects?.filter({$0.title == tfEstado.text}).first
+            produto.relationState = estado
+            produto.flCard =  stCartao.isOn
+            
             do {
                 try context.save()
              } catch  {
